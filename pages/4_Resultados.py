@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 
 st.title("📊 4. Resultados e Discussão")
 st.markdown("---")
@@ -21,45 +20,22 @@ A análise integrada da literatura evidencia que os impactos da IA Generativa n�
 """)
 
 st.subheader("📋 Matriz SWOT da IA Generativa no Mercado de Trabalho")
-st.markdown("A visualização abaixo sintetiza os fatores internos da tecnologia e os fatores externos do mercado identificados nos estudos:")
+st.markdown("A tabela abaixo sintetiza os fatores internos da tecnologia e os fatores externos do mercado identificados nos estudos:")
 
-# 2. Dados estruturados para o gráfico interativo
-swot_df = pd.DataFrame({
-    "Dimensão": ["Forças", "Forças", "Fraquezas", "Fraquezas", "Oportunidades", "Oportunidades", "Ameaças", "Ameaças"],
-    "Fator": [
-        "Aumento de Produtividade", "Redução de Tempo", 
-        "Dependência de Modelos", "Necessidade de Investimento",
-        "Novas Funções Híbridas", "Expansão de Competências",
-        "Risco de Desemprego", "Desigualdade de Acesso"
-    ],
-    "Relevância (Peso Analítico)": [9, 8, 7, 6, 9, 8, 9, 8]
-})
+# 2. Dados estruturados para a Tabela SWOT
+swot_data = {
+    "Categoria": ["Forças", "Fraquezas", "Oportunidades", "Ameaças"],
+    "Principais Fatores Identificados": [
+        "Aumento da produtividade; redução do tempo de execução de tarefas; melhoria na análise de informações; apoio à tomada de decisão; automação de atividades repetitivas.",
+        "Dependência da qualidade dos modelos de IA; possibilidade de erros; necessidade de investimentos tecnológicos; necessidade constante de atualização profissional.",
+        "Criação de novas funções relacionadas à tecnologia; expansão de empregos híbridos; desenvolvimento de competências digitais; aumento da produtividade econômica.",
+        "Substituição de tarefas altamente automatizáveis; desigualdade no acesso tecnológico; risco de desemprego tecnológico; desafios regulatórios."
+    ]
+}
 
-# Criação do gráfico interativo com Plotly
-fig = px.bar(
-    swot_df, 
-    x="Relevância (Peso Analítico)", 
-    y="Fator", 
-    color="Dimensão", 
-    orientation="h",
-    color_discrete_map={
-        "Forças": "#28a745",
-        "Fraquezas": "#ffc107",
-        "Oportunidades": "#17a2b8",
-        "Ameaças": "#ff4b4b"
-    },
-    template="plotly_dark"
-)
+df_swot = pd.DataFrame(swot_data)
 
-fig.update_layout(
-    plot_bgcolor="rgba(0,0,0,0)",
-    paper_bgcolor="rgba(0,0,0,0)",
-    font_color="#FAFAFA",
-    xaxis_title="Relevância Analítica na Literatura",
-    yaxis_title=""
-)
-
-st.plotly_chart(fig, use_container_width=True)
+st.dataframe(df_swot, use_container_width=True, hide_index=True)
 
 st.markdown("""
 ### 💡 Síntese dos Achados
