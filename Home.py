@@ -63,4 +63,4 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-st.info("👈 Utilize o menu lateral para navegar pelas demais seções do artigo.")
+
