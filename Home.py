@@ -32,7 +32,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 3. Cabeçalho e Título (Seção de Introdução)
+# 3. Cabeçalho e Título
 st.title("1. Introdução")
 st.subheader("Inteligência Artificial Generativa no Mercado de Trabalho")
 
@@ -43,12 +43,12 @@ col1, col2 = st.columns([2, 1])
 
 with col1:
     st.markdown("""
-    ### 🎯 Contextualização e Objetivo
+    ### Contextualização e Objetivo
     O avanço acelerado da Inteligência Artificial Generativa (IA Generativa), exemplificada por grandes modelos de linguagem (LLMs), tem transformado profundamente a dinâmica do mercado de trabalho global e nacional.
     
     Este estudo tem como objetivo principal analisar como essas tecnologias impactam as atividades profissionais, investigando o duplo efeito de **substituição** de tarefas rotineiras e **complementaridade** em funções que exigem maior cognição e julgamento humano.
     
-    ### 📌 Relevância do Tema
+    ### Relevância do Tema
     Compreender essas mudanças é fundamental para antecipar tendências ocupacionais, identificar riscos de desemprego tecnológico e apontar caminhos para a requalificação profissional (*reskilling* e *upskilling*).
     """)
 
@@ -63,4 +63,4 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-
+st.info("👈 Utilize o menu lateral para navegar pelas demais seções do artigo.")
