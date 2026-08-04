@@ -32,13 +32,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 3. Cabeçalho e Título
+# 3. Cabeçalho e Título da Introdução
 st.title("1. Introdução")
 st.subheader("Inteligência Artificial Generativa no Mercado de Trabalho")
 
 st.markdown("---")
 
-# 4. Conteúdo da Introdução
+# 4. Conteúdo
 col1, col2 = st.columns([2, 1])
 
 with col1:
@@ -62,5 +62,3 @@ with col2:
         🔍 <em>Estudos Analisados:</em> 5 trabalhos
     </div>
     """, unsafe_allow_html=True)
-
-st.info("👈 Utilize o menu lateral para navegar pelas demais seções do artigo.")
