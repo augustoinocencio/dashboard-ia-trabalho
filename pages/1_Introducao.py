@@ -1,14 +1,19 @@
 import streamlit as st
 
-st.title("1. Introdução")
+st.title("📖 1. Introdução")
 st.markdown("---")
 
 st.markdown("""
-### Contextualização e Objetivo
-O avanço acelerado da Inteligência Artificial Generativa (IA Generativa), exemplificada por grandes modelos de linguagem (LLMs), tem transformado profundamente a dinâmica do mercado de trabalho global e nacional.
+### Contextualização e Relevância
+A evolução das tecnologias digitais tem provocado transformações significativas na organização do trabalho e na estrutura dos mercados profissionais. Entre essas tecnologias, a **Inteligência Artificial Generativa (IA Generativa)** destaca-se pela capacidade de produzir textos, imagens, códigos e análises a partir de grandes volumes de dados[cite: 1].
 
-Este estudo tem como objetivo principal analisar como essas tecnologias impactam as atividades profissionais, investigando o duplo efeito de **substituição** de tarefas rotineiras e **complementaridade** em funções que exigem maior cognição e julgamento humano.
+O avanço dessas ferramentas, especialmente após a popularização de sistemas baseados em Grandes Modelos de Linguagem (*Large Language Models* – LLMs) como o ChatGPT, ampliou o debate sobre os efeitos da inteligência artificial no mercado de trabalho[cite: 1].
+""")
 
-### Relevância do Tema
-Compreender essas mudanças é fundamental para antecipar tendências ocupacionais, identificar riscos de desemprego tecnológico e apontar caminhos para a requalificação profissional (*reskilling* e *upskilling*), auxiliando gestores, trabalhadores e formuladores de políticas públicas na adaptação a esse novo cenário tecnológico.
+st.markdown("""
+### ❓ Questão de Pesquisa
+> *Em que medida a integração da Inteligência Artificial Generativa no mercado de trabalho atual atua como um fator de substituição ou de complementaridade das competências profissionais?*[cite: 1]
+
+### 🎯 Objetivo do Trabalho
+Analisar os impactos da Inteligência Artificial Generativa no mercado de trabalho a partir de uma revisão bibliográfica de estudos que investigam as relações entre automação, produtividade, emprego e transformação das competências profissionais[cite: 1].
 """)
