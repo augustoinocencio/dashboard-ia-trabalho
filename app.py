@@ -44,19 +44,19 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown("""
     ### 🎯 Objetivo do Projeto
-    Este dashboard interativo apresenta os resultados de uma pesquisa bibliográfica qualitativa sobre os impactos da Inteligência Artificial Generativa (IA Generativa) no mercado de trabalho[cite: 1].
+    Este dashboard interativo apresenta os resultados de uma pesquisa bibliográfica qualitativa sobre os impactos da Inteligência Artificial Generativa (IA Generativa) no mercado de trabalho.
     
-    A pesquisa investiga se a integração dessas tecnologias atua como um fator de **substituição** ou de **complementaridade** das competências profissionais atuais[cite: 1], sintetizando diferentes perspectivas acadêmicas.
+    A pesquisa investiga se a integração dessas tecnologias atua como um fator de **substituição** ou de **complementaridade** das competências profissionais atuais, sintetizando diferentes perspectivas acadêmicas.
     """)
 
 with col2:
     st.markdown("""
     <div class="highlight-card">
         <strong>Informações do Artigo</strong><br>
-        👤 <em>Autor:</em> Augusto da Silva Inocencio[cite: 1]<br>
-        🎓 <em>Instituição:</em> UFPB[cite: 1]<br>
-        📚 <em>Natureza:</em> Revisão Bibliográfica[cite: 1]<br>
-        🔍 <em>Estudos Analisados:</em> 5 trabalhos[cite: 1]
+        👤 <em>Autor:</em> Augusto da Silva Inocencio<br>
+        🎓 <em>Instituição:</em> UFPB<br>
+        📚 <em>Natureza:</em> Revisão Bibliográfica<br>
+        🔍 <em>Estudos Analisados:</em> 5 trabalhos
     </div>
     """, unsafe_allow_html=True)
 
