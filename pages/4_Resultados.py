@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 st.title("📊 4. Resultados e Discussão")
 st.markdown("---")
@@ -19,17 +20,51 @@ st.markdown("""
 A análise integrada da literatura evidencia que os impactos da IA Generativa não são homogêneos. Eles combinam efeitos de **substituição** (em tarefas estruturadas, repetitivas e previsíveis) e de **complementaridade** (em atividades que exigem julgamento humano, pensamento crítico e colaboração).
 """)
 
-st.subheader("📋 Matriz SWOT da IA Generativa no Mercado de Trabalho")
-st.markdown("A tabela abaixo sintetiza os fatores internos da tecnologia e os fatores externos do mercado identificados nos estudos:")
+# 2. Gráfico de Dispersão dos Autores
+st.subheader("📈 Representação Conceitual dos Estudos Analisados")
+st.markdown("Posicionamento dos autores conforme a ênfase atribuída à substituição e à complementaridade:")
 
-# 2. Dados estruturados para a Tabela SWOT
+autores_data = pd.DataFrame({
+    "Autor": ["Zarifhonarvar (2023)", "Araújo & Rayol (2024)", "Oliveira (2025)", "Hartley et al. (2025)", "Chen et al. (2025)"],
+    "Ênfase em Substituição": [3.0, 4.2, 5.5, 7.5, 8.2],
+    "Ênfase em Complementaridade": [6.0, 5.2, 5.8, 7.8, 8.6]
+})
+
+fig = px.scatter(
+    autores_data,
+    x="Ênfase em Substituição",
+    y="Ênfase em Complementaridade",
+    text="Autor",
+    range_x=[0, 10],
+    range_y=[0, 10],
+    template="plotly_dark"
+)
+
+fig.update_traces(textposition='top center', marker=dict(size=12, color='#9013FE'))
+
+fig.update_layout(
+    plot_bgcolor="rgba(0,0,0,0)",
+    paper_bgcolor="rgba(0,0,0,0)",
+    font_color="#FAFAFA",
+    xaxis_title="Ênfase em Substituição",
+    yaxis_title="Ênfase em Complementaridade"
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+st.markdown("---")
+
+# 3. Matriz SWOT
+st.subheader("📋 Matriz SWOT da IA Generativa no Mercado de Trabalho")
+st.markdown("Síntese dos fatores internos da tecnologia e externos do mercado identificados na literatura:")
+
 swot_data = {
     "Categoria": ["Forças", "Fraquezas", "Oportunidades", "Ameaças"],
     "Principais Fatores Identificados": [
-        "Aumento da produtividade; redução do tempo de execução de tarefas; melhoria na análise de informações; apoio à tomada de decisão; automação de atividades repetitivas.",
-        "Dependência da qualidade dos modelos de IA; possibilidade de erros; necessidade de investimentos tecnológicos; necessidade constante de atualização profissional.",
-        "Criação de novas funções relacionadas à tecnologia; expansão de empregos híbridos; desenvolvimento de competências digitais; aumento da produtividade econômica.",
-        "Substituição de tarefas altamente automatizáveis; desigualdade no acesso tecnológico; risco de desemprego tecnológico; desafios regulatórios."
+        "Aumento da produtividade; apoio à tomada de decisão; automatização de tarefas repetitivas.",
+        "Dependência tecnológica; necessidade de atualização constante; limitações em tarefas complexas.",
+        "Desenvolvimento de novas competências; transformação digital das organizações; novos modelos de trabalho.",
+        "Automação de determinadas ocupações; deslocamento de funções; ampliação das desigualdades de qualificação."
     ]
 }
 
@@ -39,5 +74,5 @@ st.dataframe(df_swot, use_container_width=True, hide_index=True)
 
 st.markdown("""
 ### 💡 Síntese dos Achados
-Os resultados demonstram que o futuro do trabalho com a IA Generativa depende diretamente da forma como as organizações implementam a tecnologia e de como os trabalhadores desenvolvem suas competências para utilizá-la como ferramenta de apoio estratégica.
+Os resultados demonstram que o futuro do trabalho dependerá menos da competição entre pessoas e inteligência artificial e mais da capacidade de integração e adaptação contínua de competências.
 """)
